@@ -23,7 +23,11 @@ export function InputArea() {
                     const response = res as string
                     console.log(response)
                     conversation.addMessage({ id:  conversation.message.length.toString(), text: response, user: false })
+
+                    window.scrollTo(0, (document.getElementById("main") as HTMLElement).scrollHeight);
+
                 })
+
             }
         }
         >

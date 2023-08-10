@@ -11,4 +11,9 @@ export const useStore = create(
     }))
   )
 );
-export default useStore.getState();
+
+// export const useStore = create<ReturnType<typeof useConversationSlice>>((...a)=>(
+//   // ...useConversationSlice(...a)
+
+// ))
+export default useStore;

@@ -12,6 +12,7 @@ impl Conversation {
 
 #[derive(Serialize,Deserialize,Clone,Debug)]
 pub struct Message {
+    pub id:String,
     pub user: bool,
     pub text: String,
 }

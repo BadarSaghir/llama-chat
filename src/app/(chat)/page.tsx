@@ -1,5 +1,13 @@
-import { TypeArea } from "../../components/TypeArea/TypeArea";
-import { ChatArea } from "../../components/ChatArea/ChatArea";
+import { TypeArea } from "../../components/client/TypeArea/TypeArea";
+import { ChatArea } from "../../components/server/ChatArea/ChatArea";
+import { Metadata } from "next";
+
+
+   
+export const metadata: Metadata = {
+  title: 'LLAMA CHAT',
+  description: 'Lama Chat bot for personalized conversation',
+}
 
 export default function Home() {
 	return (

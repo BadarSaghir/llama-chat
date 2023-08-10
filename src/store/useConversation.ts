@@ -1,7 +1,7 @@
 import { StateCreator, create } from "zustand";
 import { devtools } from "zustand/middleware";
 
-interface Message {
+export interface Message {
   id: string;
   user: boolean;
   text: string;

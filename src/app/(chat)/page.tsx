@@ -1,5 +1,5 @@
 import { TypeArea } from "../../components/client/TypeArea/TypeArea";
-import { ChatArea } from "../../components/server/ChatArea/ChatArea";
+import { ChatArea } from "../../components/client/ChatArea/ChatArea";
 import { Metadata } from "next";
 
 

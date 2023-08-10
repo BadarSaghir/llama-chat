@@ -18,17 +18,18 @@ export function InputArea() {
         <form className="w-full flex justify-center items-center gap-4" onSubmit={
             (e) => {
                 e.preventDefault()
-                invoke("get_conversation", { text: "hello" }).then((res) => {
+                conversation.addMessage({ id: conversation.message.length.toString(), text: message, user: true })
+                invoke("get_conversation", { text: message }).then((res) => {
                     const response = res as string
                     console.log(response)
-                    conversation.addMessage({ id: response, text: response, user: false })
+                    conversation.addMessage({ id:  conversation.message.length.toString(), text: response, user: false })
                 })
             }
         }
         >
-            <input className="w-2/3 p-4 border border-gray-300 rounded-full" type="text" placeholder="Enter your prompt" />
+            <input className="w-2/3 p-4 border border-gray-300 rounded-full" type="text"  onChange={handleMessage} placeholder="Enter your prompt" />
             <input className="h-full p-4 bg-blue-500 text-white rounded-full cursor-pointer"
-                onChange={handleMessage} type="submit" />
+                type="submit" />
         </form>
 
     )

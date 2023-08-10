@@ -15,17 +15,17 @@ export default function Home() {
 	// 	console.log(chatDivRef.current?.scrollTop)
 	// }
 	//  useEffect(()=>{
-	  
+
 	//   if (chatDivRef.current 
 	//    ) {
 	// 	chatDivRef.current.scrollTop= 0;
 	//   }
 	//  },[conversation.message.length])	
-	 return (
+	return (
 
-		<main  className="flex min-h-[99%] flex-col items-center pb-48 justify-between p-24"  id="main">
-
-			<ChatArea  />
+		<main className="flex min-h-[99%] flex-col items-center pb-48 justify-between p-24" id="main">
+			<h1 className="mb-10">LLAMA Chat</h1>
+			<ChatArea />
 
 			<TypeArea />
 

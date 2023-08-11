@@ -6,6 +6,7 @@ import { invoke } from "@tauri-apps/api"
 export function InputArea() {
     const [message, setMessage] = useState("")
     const conversation = store()
+    conversation.message
     function handleMessage(event: ChangeEvent<HTMLInputElement>): void {
         event.preventDefault()
         setMessage(event.target.value)
@@ -19,9 +20,10 @@ export function InputArea() {
             (e) => {
                 e.preventDefault()
                 conversation.addMessage({ id: conversation.message.length.toString(), text: message, user: true })
-                invoke("get_conversation", { text: message }).then((res) => {
+                const messages=  JSON.stringify(conversation.getMessages())
+                invoke("get_conversation", { conversation:messages }).then((res) => {
                     const response = res as string
-                    console.log(response)
+                    console.log("response.........",response)
                     conversation.addMessage({ id:  conversation.message.length.toString(), text: response, user: false })
 
                     window.scrollTo(0, (document.getElementById("main") as HTMLElement).scrollHeight);

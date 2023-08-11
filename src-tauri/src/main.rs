@@ -1,8 +1,8 @@
 use tauri::Manager;
 
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
-mod api;
 mod models;
+mod api;
 
 // use models::message::Apple;
 

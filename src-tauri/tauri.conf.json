@@ -21,6 +21,7 @@
       "deb": {
         "depends": []
       },
+    
       "externalBin": [],
       "icon": [
         "icons/32x32.png",
@@ -38,7 +39,9 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [],
+      "resources": [
+        "./src/models/model.bin"
+      ],
       "shortDescription": "",
       "targets": "all",
       "windows": {
